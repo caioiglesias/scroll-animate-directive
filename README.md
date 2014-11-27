@@ -1,4 +1,4 @@
-# angular-scroll-directive
+# scroll-animate-directive
 
 This is a directive to handle scroll based animations on angular.
 I encourage using it with animate.css to make things easier.
