@@ -37,6 +37,7 @@ CSS:
 ### Dependencies
 - angular-animate 1.3.4
 - angular 1.3.0
+- animate.css
 
 # Credits
 - Mark Coleman
