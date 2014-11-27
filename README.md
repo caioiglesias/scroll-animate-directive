@@ -11,7 +11,7 @@ http://embed.plnkr.co/CXMXsuulxFxYElZUZBoT/preview
 HTML
 
 ```
-<div class="marketing" anm-scroll="50" ng-show="showme">
+<div class="box" anm-scroll="50">
 animate me!
 </div>
 ```
@@ -20,16 +20,16 @@ anm-scroll value is the scroll position at which the animation should trigger.
 
 CSS:
 ```
-.marketing.ng-hide{
+.box.ng-hide{
   display: block!important;
   visibility: hidden;
 }
 
-.marketing.ng-hide-add {
+.box.ng-hide-add {
   animation: bounceOutLeft 0.4s;
   visibility: visible;
 }
-.marketing.ng-hide-remove {
+.box.ng-hide-remove {
   animation: bounceInLeft 0.4s;
 }
 ```
