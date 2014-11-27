@@ -30,3 +30,8 @@ CSS:
   animation: bounceInLeft 0.4s;
 }
 ```
+
+# Credits
+- Mark Coleman
+- Stuart Trutter
+- Flek
