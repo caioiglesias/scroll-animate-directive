@@ -7,15 +7,16 @@ I encourage using it with animate.css to make things easier.
 
 HTML
 
-```sh
+```
 <div class="marketing" anm-scroll="50" ng-show="showme">
 animate me!
-</div>```
+</div>
+```
 
 anm-scroll value is the scroll position at which the animation should trigger.
 
 CSS:
-```sh
+```
 .marketing.ng-hide{
   display: block!important;
   visibility: hidden;
@@ -27,4 +28,5 @@ CSS:
 }
 .marketing.ng-hide-remove {
   animation: bounceInLeft 0.4s;
-}```
+}
+```
