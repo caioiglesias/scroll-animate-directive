@@ -34,6 +34,10 @@ CSS:
 }
 ```
 
+### Dependencies
+- angular-animate 1.3.4
+- angular 1.3.0
+
 # Credits
 - Mark Coleman
 - Stuart Trutter
