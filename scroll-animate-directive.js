@@ -5,10 +5,9 @@ angular.module('scroll-animate-directive', [])
         return {
             restrict: 'A',
             transclude: true,
-            template: '<div ng-transclude ng-show=\'show\' class={{prevClass}}></div>',
+            replace:true,
+            template: '<div ng-transclude ng-show=\'show\'></div>',
             link: function(scope, element, attrs) {
-                console.log(attrs);
-                scope.prevClass=attrs.class;
 
                 function getScrollOffsets(w) {
 
