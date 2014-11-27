@@ -7,6 +7,7 @@ angular.module('scroll-animate-directive', [])
             transclude: true,
             replace:true,
             template: '<div ng-transclude ng-show=\'show\'></div>',
+            scope: {show:'@'},
             link: function(scope, element, attrs) {
 
                 function getScrollOffsets(w) {
