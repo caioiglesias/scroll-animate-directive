@@ -3,6 +3,9 @@
 This is a directive to handle scroll based animations on angular.
 I encourage using it with animate.css to make things easier.
 
+### Demo
+http://embed.plnkr.co/CXMXsuulxFxYElZUZBoT/preview
+
 ### Usage
 
 HTML
