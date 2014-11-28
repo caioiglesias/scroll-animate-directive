@@ -16,7 +16,16 @@ animate me!
 </div>
 ```
 
-anm-scroll value is the scroll position at which the animation should trigger.
+ani-scroll value is the scroll position at which the animation should trigger.
+
+```
+<div class="box" ani-view>
+animate me!
+</div>
+```
+
+ani-view triggers the animation when the element enters the viewport.
+
 
 CSS:
 ```
@@ -38,8 +47,3 @@ CSS:
 - angular-animate 1.3.4
 - angular 1.3.0
 - animate.css
-
-# Credits
-- Mark Coleman
-- Stuart Trutter
-- Flek
