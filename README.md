@@ -11,7 +11,7 @@ http://embed.plnkr.co/CXMXsuulxFxYElZUZBoT/preview
 HTML
 
 ```
-<div class="box" anm-scroll="50">
+<div class="box" ani-scroll="50">
 animate me!
 </div>
 ```

@@ -1,13 +1,15 @@
 'use strict';
 
 angular.module('scroll-animate-directive', [])
-    .directive('anmScroll', function($window) {
+    .directive('aniScroll', function($window) {
         return {
             restrict: 'A',
             transclude: true,
-            replace:true,
+            replace: true,
             template: '<div ng-transclude ng-show=\'show\'></div>',
-            scope: {show:'@'},
+            scope: {
+                show: '@'
+            },
             link: function(scope, element, attrs) {
 
                 function getScrollOffsets(w) {
@@ -40,7 +42,7 @@ angular.module('scroll-animate-directive', [])
                 }
 
                 angular.element($window).bind('scroll', function() {
-                    var targetOffset = attrs.anmScroll;
+                    var targetOffset = attrs.aniScroll;
                     var offset = getScrollOffsets($window);
                     if (offset.y >= targetOffset) {
                         scope.show = true;
