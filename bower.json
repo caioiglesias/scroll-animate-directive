@@ -1,0 +1,28 @@
+{
+    "name": "scroll-animate-directive",
+    "version": "0.1.0",
+    "homepage": "https://github.com/caioiglesias/scroll-animate-directive",
+    "authors": [
+        "Caio Iglesias <caioiglesias@gmail.com>"
+    ],
+    "description": "directive designed to handle scroll based animations on angular.",
+    "main": "src/scroll-animate-directive.js",
+    "keywords": [
+        "scroll",
+        "animation",
+        "angular"
+    ],
+    "license": "MIT",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "angular": "~1.3.0",
+        "angular-animate": "~1.3.0",
+        "animate.css": "^3.2.0"
+    },
+}
