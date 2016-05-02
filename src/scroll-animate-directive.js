@@ -115,7 +115,6 @@ angular.module('scroll-animate-directive', [])
                       y: parseInt(viewport.y + offset.y)
                   }
                   if (coverage.y >= position.y && coverage.x >= position.x) {
-                    console.log(coverage, position);
                     return true;
                   }
                   return false;
