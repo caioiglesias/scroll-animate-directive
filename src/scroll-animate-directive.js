@@ -5,7 +5,7 @@ angular.module('scroll-animate-directive', [])
         function($scope) {
             $scope.getScrollOffsets = function(w) {
 
-                // Use the specified window or the current window if no argument 
+                // Use the specified window or the current window if no argument
                 w = w || window;
 
                 // This works for all browsers except IE versions 8 and before
@@ -84,22 +84,42 @@ angular.module('scroll-animate-directive', [])
                 show: '@',
             },
             link: function(scope, element, attrs) {
+                scope.show = false;
 
-                angular.element($window).bind('scroll', function() {
-                    var position = scope.getPosition(element);
-                    var offset = scope.getScrollOffsets($window);
-                    var viewport = scope.getViewPortSize($window);
-                    var coverage = {
-                        x: parseInt(viewport.x + offset.x),
-                        y: parseInt(viewport.y + offset.y)
-                    }
-                    if (coverage.y >= position.y && coverage.x >= position.x) {
-                        scope.show = true;
-                    } else {
-                        scope.show = false;
-                    }
-                    scope.$apply();
-                });
+                updateElementVisiblityOnScroll();
+                updateElementOnPageLoad();
+
+
+                function updateElementVisiblityOnScroll(){
+                  angular.element($window).bind('scroll', updateElementVisiblity);
+                }
+
+                //enables elements to be shown if they're already on viewport when page's loaded
+                function updateElementOnPageLoad(){
+                  setTimeout(updateElementVisiblity, 0);
+                }
+
+                function updateElementVisiblity(){
+                  scope.show = elementIsOnViewport(scope, element, $window)
+                  if(scope.show){
+                  }
+                  scope.$apply();
+                }
+
+                function elementIsOnViewport(scope, element, $window){
+                  var position = scope.getPosition(element);
+                  var offset = scope.getScrollOffsets($window);
+                  var viewport = scope.getViewPortSize($window);
+                  var coverage = {
+                      x: parseInt(viewport.x + offset.x),
+                      y: parseInt(viewport.y + offset.y)
+                  }
+                  if (coverage.y >= position.y && coverage.x >= position.x) {
+                    console.log(coverage, position);
+                    return true;
+                  }
+                  return false;
+                }
             }
         };
     });
