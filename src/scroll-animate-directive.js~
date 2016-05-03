@@ -101,6 +101,8 @@ angular.module('scroll-animate-directive', [])
 
                 function updateElementVisiblity(){
                   scope.show = elementIsOnViewport(scope, element, $window)
+                  if(scope.show){
+                  }
                   scope.$apply();
                 }
 
